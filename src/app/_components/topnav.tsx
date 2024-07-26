@@ -7,7 +7,7 @@ function TopNav() {
     const router = useRouter();
     return (
         <nav className="flex w-full items-center justify-between border-b p-5 text-x1 font-semibold">
-            <div>
+            <div className="text-2xl">
                 Gallery
             </div>
             <div className="flex gap-6">
