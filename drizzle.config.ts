@@ -2,11 +2,11 @@ import { type Config } from "drizzle-kit";
 
 import { env } from "~/env";
 
-export default {
-  schema: "./src/server/db/schema.ts",
-  dialect: "postgresql",
+export default ({
+  schema: './src/server/db/schema.ts',
+  out: './supabase/migrations',
+  dialect: 'postgresql',
   dbCredentials: {
-    url: env.DATABASE_URL,
+    url: env.DATABASE_URL!,
   },
-  tablesFilter: ["gallery_*"],
-} satisfies Config;
+}) satisfies Config;
