@@ -51,11 +51,11 @@ function SimpleUploaButton() {
             });
         },
         onClientUploadComplete() {
-            router.refresh();
             toast.dismiss("upload-begin")
             toast("Upload complete", {
-                duration: 50
+                duration: 2000,
             })
+            router.refresh();
         },
     });
 
