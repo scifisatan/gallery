@@ -18,7 +18,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  modal,
+}: {
+  children: React.ReactNode;
+  modal: React.ReactNode;
+}) {
   return (
     <ClerkProvider>
       <html lang="en" className={`${GeistSans.variable} flex flex-col gap-4`}>
@@ -33,7 +37,10 @@ export default function RootLayout({
             routerConfig={extractRouterConfig(ourFileRouter)}
           />
           <TopNav />
-          {children}</body>
+          {children}
+          {modal}
+          <div id="modal-root" />
+        </body>
       </html>
     </ClerkProvider>
   );
