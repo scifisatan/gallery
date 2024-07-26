@@ -8,6 +8,8 @@ const mockImages = mockUrls.map((url, index) => ({
   url,
 }))
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
   return (
     <main>
