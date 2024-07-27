@@ -40,6 +40,5 @@ export async function deleteImage(id: number) {
         .delete(images)
         .where(and(eq(images.id, id), eq(images.userId, user.userId)));
 
-    revalidatePath("/");
     redirect("/")
 }
